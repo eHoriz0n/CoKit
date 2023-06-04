@@ -15,6 +15,42 @@ export default {
       fontFamily: {
         Poppins: ["Poppins"],
       },
+      height: {
+        30: "122px",
+        15: "68px",
+        19: "73px",
+        22222: "60%",
+      },
+      width: {
+        15: "68px",
+        72: "354px",
+        800: "600px",
+      },
+      maxWidth: {
+        72: "354px",
+        44: "176px",
+        444: "378px",
+      },
+      minHeight: {
+        44: "469",
+      },
+      borderWidth: {
+        6: "6px",
+      },
+      fontSize: {
+        777: " 1.6875rem ",
+        xss: "9px",
+        myXl: "22px",
+        xs1: "11px",
+      },
+      borderRadius: {
+        myround: "55px",
+        myround1: "35px",
+      },
+      padding: {
+        19: "47px",
+        4.5: "18px",
+      },
     },
   },
   plugins: [],
