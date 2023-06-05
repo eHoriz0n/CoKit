@@ -25,6 +25,29 @@ const PageBodyJ = () => {
           <OneJournal />
           <OneJournal />
           <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
+          <OneJournal />
         </div>
       </div>
     </div>
