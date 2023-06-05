@@ -6,12 +6,12 @@ import "../../components/typography.css";
 
 const InspectTask = () => {
   return (
-    <div className="flex flex-col bg-myYellow ">
+    <div className="flex flex-col h-screen bg-myYellow myLg:px-10 ">
       <div className="flex justify-between items-center pt-16 px-9 mb-12 ">
         <GetTheDate colorr="#1E1E1E" />
         <PrevBtn TheScale={"50px"} />
       </div>
-      <div className="bg-myMateBlack  pt-16 h-full rounded-t-myround1 ">
+      <div className="bg-myMateBlack  pt-16 h-full rounded-t-myround1 flex flex-col justify-between ">
         <div className="px-10">
           <div className="mb-7 flex justify-between">
             <p className="text-myDarkYellow THEtypo-14">23 ,june 2023</p>

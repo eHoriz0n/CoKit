@@ -13,15 +13,15 @@ function App() {
   return (
     <>
       <Router>
-        <Routes>
+        {/* <Routes>
           <Route exact path="/" element={<Task />}></Route>
           <Route exact path="/journals" element={<Journals />}></Route>
-        </Routes>
-        {/* <NewJournal /> */}
-        {/* <NewTask /> */}
+        </Routes> */}
+        {/* <NewJournal />
+        <NewTask /> */}
         {/* <InspectJournal /> */}
-        {/* <InspectTask /> */}
-        <div className="fixed bottom-0 left-2/4 -translate-x-2/4 mb-4 mt-12">
+        <InspectTask />
+        <div className="fixed bottom-0 left-2/4 -translate-x-2/4 mb-4 mt-12 myLg:left-0 myLg:translate-x-1/4">
           <NavBar TheHeight={"68px"} />
         </div>
       </Router>
