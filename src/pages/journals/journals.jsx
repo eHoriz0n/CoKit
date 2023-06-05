@@ -5,7 +5,9 @@ const Journals = () => {
   return (
     <div className="pt-16 px-5 myLg:flex myLg:flex-row myLg:gap-24 myLg:px-16 ">
       <Header />
-      <PageBodyJ />
+      <div className="myLg:ms-96">
+        <PageBodyJ />
+      </div>
     </div>
   );
 };

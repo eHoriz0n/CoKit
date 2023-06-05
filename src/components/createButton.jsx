@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./plusButton.css";
 import useRoutingState from "../context/routeState";
 import { useEffect, useState } from "react";
-const PlusBtn = ({ TheScale, TheWork }) => {
+const CreateBtn = ({ TheScale, TheWork }) => {
   const { whereImIn } = useRoutingState((state) => ({
     whereImIn: state.whereImIn,
   }));
@@ -25,9 +25,7 @@ const PlusBtn = ({ TheScale, TheWork }) => {
   // };
 
   useEffect(() => {
-    whereImIn === "journal"
-      ? setRouteto("/new-journals")
-      : setRouteto("/new-tasks");
+    whereImIn === "journal" ? setRouteto("/journals") : setRouteto("/");
   }, [whereImIn]);
 
   // if (TheWork === "New") {
@@ -68,4 +66,4 @@ const PlusBtn = ({ TheScale, TheWork }) => {
   );
 };
 
-export default PlusBtn;
+export default CreateBtn;

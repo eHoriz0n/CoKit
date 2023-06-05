@@ -1,6 +1,6 @@
 import GetTheDate from "../../components/getTheDate";
 import JournalInputs from "../../components/journal-inputs";
-import PlusBtn from "../../components/plusButton";
+import CreateBtn from "../../components/createButton";
 import PrevBtn from "../../components/previousBtn";
 import "../../components/typography.css";
 const NewJournal = () => {
@@ -13,7 +13,7 @@ const NewJournal = () => {
       <div className="flex flex-col items-center px-9 myLg:flex-row myLg:items-start myLg:justify-center  ">
         <JournalInputs />
         <div className="mb-14 myLg:pt-12 myLg:relative myLg:right-12">
-          <PlusBtn TheScale={"50px"} />
+          <CreateBtn TheScale={"50px"} TheWork={"Create"} />
         </div>
       </div>
     </div>

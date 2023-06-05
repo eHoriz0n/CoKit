@@ -1,4 +1,4 @@
-import PlusBtn from "../../components/plusButton";
+import CreateBtn from "../../components/createButton";
 import PrevBtn from "../../components/previousBtn";
 import TasksInput from "../../components/task-inputs";
 import "../../components/typography.css";
@@ -11,7 +11,7 @@ const NewTask = () => {
       <div className="flex flex-col items-center px-9 myLg:flex-row myLg:items-start myLg:justify-center ">
         <TasksInput />
         <div className="mb-14 myLg:pt-12 myLg:relative myLg:right-12">
-          <PlusBtn TheScale={"50px"} />
+          <CreateBtn />
         </div>
       </div>
     </div>
