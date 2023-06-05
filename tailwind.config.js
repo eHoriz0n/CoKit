@@ -15,21 +15,30 @@ export default {
       fontFamily: {
         Poppins: ["Poppins"],
       },
+      screens: {
+        myLg: "768px",
+      },
       height: {
         30: "122px",
         15: "68px",
         19: "73px",
         22222: "60%",
+        HeadMedH: "450px",
       },
       width: {
+        HeadMedW: "300px",
         15: "68px",
         72: "354px",
+
         800: "600px",
+        4444: "768px",
       },
       maxWidth: {
         72: "354px",
+        the72: "450px",
         44: "176px",
         444: "378px",
+        4444: "768px",
       },
       minHeight: {
         44: "469",
