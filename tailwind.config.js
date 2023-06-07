@@ -18,6 +18,8 @@ export default {
       screens: {
         myLg: "768px",
         myLg2: "540px",
+        myLg3: "494px",
+        myLg4: "1020px",
       },
       height: {
         jj: "1.125rem",
