@@ -19,6 +19,7 @@ export default {
         myLg: "768px",
       },
       height: {
+        jj: "18px",
         30: "122px",
         15: "68px",
         19: "73px",
@@ -26,6 +27,7 @@ export default {
         HeadMedH: "450px",
       },
       width: {
+        jj: "18px",
         HeadMedW: "300px",
         15: "68px",
         72: "354px",
