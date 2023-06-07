@@ -6,7 +6,7 @@ const OneTask = ({ label }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <label className="bg-myMateBlack text-myFontWhite rounded-2xl py-4 w-fit flex items-center gap-4 px-4 cursor-pointer ">
+    <label className="bg-myMateBlack text-myFontWhite rounded-2xl py-4 sm:w-fit THEtypo-14 w-full flex items-center gap-4 px-4 cursor-pointer ">
       <input
         type="checkbox"
         checked={isChecked}

@@ -1,15 +1,15 @@
 .bg-button-Add {
     background: url('../assets/plus.png');
-    background-size: 30px;
-    width: 68px;
+    background-size: 1.475em;
+    width: 3.625em;
 
     /* border: 6px solid #FDFFFC; */
 }
 
 .bg-button-Remove {
     background: url('../assets/plus.png');
-    background-size: 30px;
-    width: 68px;
+    background-size: 1.475em;
+    width: 3.625em;
     transform: rotate(45deg);
 
     /* border: 6px solid #FDFFFC; */
@@ -17,14 +17,8 @@
 
 .bg-button-GoBack {
     background-image: url('../assets/previous.png');
-    background-size: 30px;
-    width: 68px;
+    background-size: 1.475em;
+    width: 3.625em;
 
     /* border: 6px solid #FDFFFC; */
-}
-
-.bg-button-Navigate {
-    background-image: url('../assets/previous.png');
-    background-size: 30px;
-    transform: rotate(180deg);
 }
