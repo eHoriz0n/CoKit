@@ -12,7 +12,12 @@ const NewJournal = () => {
       <div className="flex flex-col items-center px-9 myLg:flex-row myLg:items-start myLg:justify-center  ">
         <DataInputs theType={"Journal"} />
         <div className="mb-14 myLg:pt-12 myLg:relative myLg:right-12">
-          <CstBtn onClick={""} bgImg={"Add"} routeto={"/"} Btnlabel={""} />
+          <CstBtn
+            onClick={""}
+            bgImg={"Add"}
+            routeto={"/journals"}
+            Btnlabel={""}
+          />
         </div>
       </div>
     </div>
