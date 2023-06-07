@@ -6,7 +6,7 @@ const PageBodyT = () => {
     <div>
       <p className="font-bold THEtypo-MyXl mb-4">Your Tasks</p>
       {/* it will be a loop to create journal Component */}
-      <div className="px-6 ">
+      <div className=" ">
         <div className="flex flex-wrap gap-4  ">
           <OneTask label={"do ur task"} />
           <OneTask label={"do urfgdfgdfsg task"} />
