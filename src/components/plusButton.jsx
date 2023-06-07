@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./plusButton.css";
 import useRoutingState from "../context/routeState";
 import { useEffect, useState } from "react";
-const PlusBtn = ({ TheScale, TheWork }) => {
+const PlusBtn = ({ onClick, bgColor }) => {
   const { whereImIn } = useRoutingState((state) => ({
     whereImIn: state.whereImIn,
   }));
@@ -51,16 +51,11 @@ const PlusBtn = ({ TheScale, TheWork }) => {
         }}
       > */}
       <NavLink to={routeto}>
-        <button
+        <button onClick={onClick}
           className=" bg-myBrown bg-no-repeat border-6 border-myFontWhite
-        rounded-full border-solid bg-center w-15 h-15 bg-button-bg
+        rounded-full border-solid bg-center bg-{bgColor}-500 w-15 h-15 bg-button-bg
         hover:bg-myDarkYellow "
-          style={{
-            width: TheScale || "68px",
-            height: TheScale || "68px",
-            backgroundSize: (parseInt(TheScale) * 26) / 68 || "26px",
-            borderWidth: (parseInt(TheScale) * 6) / 68 || "6px",
-          }}
+          
         ></button>
       </NavLink>
       {/* </button> */}
