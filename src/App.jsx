@@ -1,5 +1,4 @@
 import "./App.css";
-import NavBar from "./components/navBar";
 import InspectJournal from "./pages/inspect-journals/inspect-journals";
 import InspectTask from "./pages/inspect-task/inspect-task";
 import Journals from "./pages/journals/journals";
@@ -26,9 +25,6 @@ function App() {
         <NewTask /> */}
         {/* <InspectJournal /> */}
         {/* <InspectTask /> */}
-        <div className="fixed bottom-0 left-2/4 -translate-x-2/4 mb-4 mt-12 myLg:left-0 myLg:translate-x-1/4">
-          <NavBar TheHeight={"68px"} />
-        </div>
       </Router>
     </>
   );
