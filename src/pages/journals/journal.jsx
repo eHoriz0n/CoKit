@@ -1,15 +1,15 @@
 import Header from "../../components/header";
-import PageBodyJ from "../../components/pageBodyJ";
+import PageBody from "../../components/pageBody";
 
-const Journals = () => {
+const Journal = () => {
   return (
     <div className="pt-16 px-5 myLg:flex myLg:flex-row myLg:gap-24 myLg:px-16 ">
-      <Header />
+      <Header thePlace={"Journal"} />
       <div className="myLg:ms-96">
-        <PageBodyJ />
+        <PageBody theType={"Journal"} />
       </div>
     </div>
   );
 };
 
-export default Journals;
+export default Journal;

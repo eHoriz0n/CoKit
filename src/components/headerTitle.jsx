@@ -1,18 +1,14 @@
-import useRoutingState from "../context/routeState";
 import "./typography.css";
-const HeaderTitle = () => {
-  const { whereImIn } = useRoutingState((state) => ({
-    whereImIn: state.whereImIn,
-  }));
-
+const HeaderTitle = ({ theType }) => {
   return (
     <div>
-      {whereImIn === "task" && (
-        <p className="font-bold THEtypo-777"> Plan for something ?</p>
-      )}
-      {whereImIn === "journal" && (
-        <p className="font-bold THEtypo-777"> Any thoughts for today?</p>
-      )}
+      <p className="font-bold THEtypo-777">
+        {theType === "Task"
+          ? "Any plans Today?"
+          : theType === "Journal"
+          ? "Any thoughts ?"
+          : "hh"}
+      </p>
     </div>
   );
 };
