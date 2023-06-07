@@ -3,6 +3,11 @@ import PlusBtn from "./plusButton";
 import HeaderTitle from "./headerTitle";
 
 const Header = () => {
+  
+  const handelheader = () =>{
+    console.log('this function from Header ')
+  }
+  
   return (
     <div
       className="bg-myYellow  h-30 ps-4.5 pe-7 pt-6 rounded-2xl mb-12
@@ -14,7 +19,7 @@ const Header = () => {
         <HeaderTitle />
       </div>
       <div className="pt-2 flex justify-end  myLg:pb-4">
-        <PlusBtn TheWork={"New"} />
+        <PlusBtn onClick={handelheader} bgColor='red' />
       </div>
       {/* <RmBtn /> */}
     </div>
