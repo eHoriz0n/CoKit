@@ -17,12 +17,12 @@
 
 .THEtypo-xss {
 
-    font-size: 0.775rem
+    font-size: 0.875rem
 }
 
 .THEtypo-xs1 {
 
-    font-size: 0.9rem
+    font-size: 1rem
 }
 
 .THEtypo-xxl {
@@ -33,7 +33,7 @@
 .text-truncate {
     overflow: hidden;
     /* Hide overflowing text */
-    /* white-space:; */
+    white-space: nowrap;
     /* Prevent line breaks */
     text-overflow: ellipsis;
     /* Display ellipsis (...) for truncated text */
@@ -41,6 +41,8 @@
     /* Adjust the number of lines to truncate */
 
 }
+
+
 
 @media screen and (min-width:1367px) {
 
@@ -59,11 +61,11 @@
 
     .THEtypo-xss {
 
-        font-size: calc(.5vw + 0.775rem)
+        font-size: calc(.22vw + 0.775rem)
     }
 
     .THEtypo-xs1 {
-        font-size: calc(.5vw + 0.9rem)
+        font-size: calc(.22vw + 0.9rem)
     }
 
     .THEtypo-xxl {

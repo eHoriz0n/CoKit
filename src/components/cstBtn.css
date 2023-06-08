@@ -2,6 +2,20 @@
     background: url('../assets/plus.png');
     background-size: 1.475em;
     width: 3.625em;
+    height: 3.625em;
+
+    /* border: 6px solid #FDFFFC; */
+}
+
+.bg-button-Remove1 {
+    background: url('../assets/plus.png');
+    background-size: 0.75em;
+    flex-flow: 3;
+    border: none;
+    padding: 1rem;
+    transform: rotate(45deg);
+
+
 
     /* border: 6px solid #FDFFFC; */
 }
@@ -10,7 +24,10 @@
     background: url('../assets/plus.png');
     background-size: 1.475em;
     width: 3.625em;
+    height: 3.625em;
     transform: rotate(45deg);
+
+
 
     /* border: 6px solid #FDFFFC; */
 }
@@ -19,6 +36,7 @@
     background-image: url('../assets/previous.png');
     background-size: 1.475em;
     width: 3.625em;
+    height: 3.625em;
 
     /* border: 6px solid #FDFFFC; */
 }

@@ -45,9 +45,11 @@ export default {
         44: "11rem",
         444: "23.625rem",
         4444: "48rem",
+        441: "12.5rem",
       },
       minHeight: {
         44: "29.3125rem",
+        50: "50%",
       },
       borderWidth: {
         6: "0.375rem",
