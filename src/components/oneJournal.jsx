@@ -1,17 +1,17 @@
+import { NavLink } from "react-router-dom";
 import "./typography.css";
-const OneJournal = () => {
+const OneJournal = ({ id, title, description }) => {
   return (
-    <div className="w-full max-w-44 h-24 rounded-2xl 	text-truncate	 bg-myMateBlack p-4 pb-3 ">
-      <p className="font-bold THEtypo-xss text-myFontWhite mb-1 ">
-        lorem ipsum
-      </p>
+    <NavLink
+      to={`/journals/${id}`}
+      onClick={() => console.log(id)}
+      className="w-full  h-24 pt-6  myLg:max-w-44  rounded-2xl 	text-truncate cursor-pointer hover:bg-myLightDark	 bg-myMateBlack p-4 pb-3 "
+    >
+      <p className="font-bold THEtypo-xss text-myFontWhite mb-1 ">{title}</p>
       <p className=" THEtypo-xs1 text-truncate font-normal text-myFontWhite h-3/5  ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est
-        reiciendis quos quia delectus nostrum reprehenderit et qui ad provident
-        maxime officia quaerat sit doloribus, sed nemo suscipit aspernatur?
-        Tenetur!
+        {description}
       </p>
-    </div>
+    </NavLink>
   );
 };
 

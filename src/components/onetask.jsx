@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./oneTask.css";
 import "./typography.css";
+import CstBtn from "./cstBtn";
 
 const OneTask = ({ label }) => {
   const [isChecked, setIsChecked] = useState(false);
@@ -18,6 +19,7 @@ const OneTask = ({ label }) => {
       >
         {label}
       </span>
+      <CstBtn routeto={"/"} onClick={""} bgImg={"Remove1"} Btnlabel={""} />
     </label>
   );
 };

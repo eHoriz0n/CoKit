@@ -1,10 +1,17 @@
 import { create } from "zustand";
-const useRoutingState = create((set) => ({
-  whereImIn: "task",
-
-  setWhereImIn: (whereImIn) => {
-    set(() => ({ whereImIn: whereImIn }));
+const useDataStore = create((set) => ({
+  task: "",
+  setTask: (task) => {
+    set(() => ({ task: task }));
+  },
+  title: "",
+  setTitle: (title) => {
+    set(() => ({ title: title }));
+  },
+  description: "",
+  setDescription: (description) => {
+    set(() => ({ description: description }));
   },
 }));
 
-export default useRoutingState;
+export default useDataStore;

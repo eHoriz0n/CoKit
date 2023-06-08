@@ -19,7 +19,11 @@ function App() {
           <Route exact path="/journals" element={<Journal />}></Route>
           <Route exact path="/new-journals" element={<NewJournal />}></Route>
           <Route exact path="/new-tasks" element={<NewTask />}></Route>
-          <Route exact path="/inspect" element={<InspectJournal />}></Route>
+          <Route
+            exact
+            path="/journals/:id"
+            element={<InspectJournal />}
+          ></Route>
         </Routes>
       </Router>
     </>
