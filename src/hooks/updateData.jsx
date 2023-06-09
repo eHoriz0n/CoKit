@@ -38,7 +38,7 @@ export const useUpdateData = () => {
     // Update local storage with input values
     theType === "Journal"
       ? ((theStandObj = journalDataObj),
-        theStandObj.title.trim() === "" && theStandObj.description.trim()
+        theStandObj.title.trim() === "" && theStandObj.description.trim() === ""
           ? (verfRes = false)
           : "")
       : theType === "Task"
