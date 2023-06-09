@@ -4,7 +4,7 @@ import "./typography.css";
 import CstBtn from "./cstBtn";
 import { useUpdateData } from "../hooks/updateData";
 
-const OneTask = ({ label, id }) => {
+const OneTask = ({ label, id, setDataArr }) => {
   const [isChecked, setIsChecked] = useState(false);
   const { DeleteData, PullData } = useUpdateData();
   const hhh = PullData("Task");
@@ -25,7 +25,10 @@ const OneTask = ({ label, id }) => {
       </span>
       <CstBtn
         routeto={"/"}
-        onClick={() => DeleteData(id, "Task")}
+        onClick={() => {
+            DeleteData(id, "Task");
+            setDataArr(prev => prev.filter(task => task.id !== id))
+        }}
         bgImg={"Remove1"}
         Btnlabel={""}
       />
