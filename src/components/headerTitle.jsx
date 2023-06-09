@@ -4,9 +4,9 @@ const HeaderTitle = ({ theType }) => {
     <div>
       <p className="font-bold THEtypo-777">
         {theType === "Task"
-          ? "Any plans Today?"
+          ? "Any plans ?"
           : theType === "Journal"
-          ? "Any thoughts ?"
+          ? "Any ideas ?"
           : "hh"}
       </p>
     </div>

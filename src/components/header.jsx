@@ -11,7 +11,7 @@ const Header = ({ thePlace }) => {
 
   return (
     <div
-      className="bg-myYellow  h-48 mysLg:h-36 myLg2:h-30  ps-4.5 pe-7   rounded-2xl mb-12
+      className="bg-myYellow  h-48 mysLg:h-36 myLg3:h-30  ps-4.5 pe-7   rounded-2xl mb-12
       myLg:h-3/4 flex justify-between
       myLg:flex-col myLg:items-start myLg:justify-between myLg:w-1/4  myLg:fixed   "
     >
