@@ -13,7 +13,7 @@ const PageBody = ({ theType }) => {
     <div>
       <p className="font-bold THEtypo-MyXl mb-4">Your {theType}s</p>
       {/* it will be a loop to create journal Component */}
-      <div className="flex  sm:flex-wrap sm:flex-row gap-4 flex-nowrap flex-col ">
+      <div className="flex  sm:flex-wrap sm:flex-row gap-4 flex-nowrap flex-col  pb-20">
         {theType === "Task"
           ? dataArr.map((task) => {
               // eslint-disable-next-line react/jsx-key

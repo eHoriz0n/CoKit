@@ -16,6 +16,7 @@ export default {
         Poppins: ["Poppins"],
       },
       screens: {
+        mysLg: "338px",
         myLg: "768px",
         myLg2: "540px",
         myLg3: "494px",

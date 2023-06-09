@@ -11,7 +11,7 @@ const Header = ({ thePlace }) => {
 
   return (
     <div
-      className="bg-myYellow  h-36  ps-4.5 pe-7  myLg3:h-30 rounded-2xl mb-12
+      className="bg-myYellow  h-48 mysLg:h-36 myLg2:h-30  ps-4.5 pe-7   rounded-2xl mb-12
       myLg:h-3/4 flex justify-between
       myLg:flex-col myLg:items-start myLg:justify-between myLg:w-1/4  myLg:fixed   "
     >
@@ -19,7 +19,7 @@ const Header = ({ thePlace }) => {
         <GetTheDate />
         <HeaderTitle theType={thePlace} />
       </div>
-      <div className=" flex flex-col items-end justify-between  gap-20 myLg3:gap-14 myLg:flex-row myLg:-mb-8">
+      <div className=" flex flex-col items-end justify-between gap-32 mysLg:gap-20 myLg3:gap-14 myLg:flex-row myLg:-mb-8">
         <div className="-mt-6">
           <CstBtn
             onClick={handelheader}
@@ -40,6 +40,7 @@ const Header = ({ thePlace }) => {
             }
           />
         </div>
+
         <CstBtn
           onClick={handelheader}
           bgImg={"Add"}

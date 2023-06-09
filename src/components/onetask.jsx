@@ -18,7 +18,9 @@ const OneTask = ({ label, id, setDataArr }) => {
         className={`appearance-none h-4 w-4 rounded-full cursor-pointer border-2 border-myBrown checked:bg-slate-200`}
       />
       <span
-        className={`flex-1 ${isChecked ? "line-through text-myBrown" : ""}`}
+        className={` break-all flex-1 ${
+          isChecked ? "line-through text-myBrown" : ""
+        }`}
       >
         {label}
       </span>
