@@ -18,14 +18,10 @@ export const useUpdateData = () => {
     setDescriptionValue: state.setDescription,
   }));
 
-  const { theId, setTheId, verify, setVerify } = useCrudStore((state) => ({
+  const { theId } = useCrudStore((state) => ({
     theId: state.theId,
-    setTheId: state.setTheId,
-    verify: state.verify,
-    setVerify: state.setVerify,
   }));
 
-  console.log("the storage task " + taskValue);
   const journalDataObj = {
     id: parseInt(theId),
     title: titleValue,
