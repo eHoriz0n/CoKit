@@ -21,7 +21,7 @@ const PageBody = ({ theType }) => {
           ? dataArr.map((task) => {
               // eslint-disable-next-line react/jsx-key
               return task.task === "" ? null : (
-                <OneTask label={task.task} id={task.id} />
+                <OneTask label={task.task} id={task.id} setDataArr={setDataArr} />
               );
             })
           : theType === "Journal"
@@ -32,6 +32,7 @@ const PageBody = ({ theType }) => {
                   id={journal.id}
                   title={journal.title}
                   description={journal.description}
+                  setDataArr={setDataArr}
                 />
               );
             })
