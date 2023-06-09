@@ -1,4 +1,5 @@
 import { create } from "zustand";
+
 const useDataStore = create((set) => ({
   task: "",
   setTask: (task) => {
@@ -11,6 +12,10 @@ const useDataStore = create((set) => ({
   description: "",
   setDescription: (description) => {
     set(() => ({ description: description }));
+  },
+  dataArray: [],
+  setDataArray: (dataArray) => {
+    set(() => ({ dataArray: dataArray }));
   },
 }));
 export const useCrudStore = create((set) => ({

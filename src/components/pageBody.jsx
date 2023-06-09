@@ -3,8 +3,6 @@ import { useUpdateData } from "../hooks/updateData";
 import OneJournal from "./oneJournal";
 import OneTask from "./onetask";
 import "./typography.css";
-import { data } from "autoprefixer";
-
 const PageBody = ({ theType }) => {
   const { PullData } = useUpdateData();
   const [dataArr, setDataArr] = useState(PullData(theType));
@@ -15,13 +13,16 @@ const PageBody = ({ theType }) => {
     <div>
       <p className="font-bold THEtypo-MyXl mb-4">Your {theType}s</p>
       {/* it will be a loop to create journal Component */}
-
       <div className="flex  sm:flex-wrap sm:flex-row gap-4 flex-nowrap flex-col ">
         {theType === "Task"
           ? dataArr.map((task) => {
               // eslint-disable-next-line react/jsx-key
               return task.task === "" ? null : (
-                <OneTask label={task.task} id={task.id} />
+                <OneTask
+                  label={task.task}
+                  id={task.id}
+                  setDataArr={setDataArr}
+                />
               );
             })
           : theType === "Journal"
@@ -32,6 +33,7 @@ const PageBody = ({ theType }) => {
                   id={journal.id}
                   title={journal.title}
                   description={journal.description}
+                  setDataArr={setDataArr}
                 />
               );
             })
@@ -40,5 +42,4 @@ const PageBody = ({ theType }) => {
     </div>
   );
 };
-
 export default PageBody;
