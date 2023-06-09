@@ -16,6 +16,7 @@ const DataInputs = ({ theType }) => {
     descriptionValue: state.description,
     setDescriptionValue: state.setDescription,
   }));
+  console.log(taskValue);
 
   // const handleDescription = (event) => {
   //   setDescriptionValue(event.target.value);

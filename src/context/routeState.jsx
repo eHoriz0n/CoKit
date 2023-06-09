@@ -13,5 +13,15 @@ const useDataStore = create((set) => ({
     set(() => ({ description: description }));
   },
 }));
+export const useCrudStore = create((set) => ({
+  verify: false,
 
+  setVerify: (verify) => {
+    set(() => ({ verify: verify }));
+  },
+  theId: "",
+  setTheId: (theId) => {
+    set(() => ({ theId: theId }));
+  },
+}));
 export default useDataStore;

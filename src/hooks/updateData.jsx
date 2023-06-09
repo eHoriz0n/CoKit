@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import useDataStore from "../context/routeState";
+import useDataStore, { useCrudStore } from "../context/routeState";
 
 export const useUpdateData = () => {
   const {
     taskValue,
-
+    setTaskValue,
     titleValue,
-
+    setTitleValue,
     descriptionValue,
+    setDescriptionValue,
   } = useDataStore((state) => ({
     taskValue: state.task,
     setTaskValue: state.setTask,
@@ -16,26 +17,49 @@ export const useUpdateData = () => {
     descriptionValue: state.description,
     setDescriptionValue: state.setDescription,
   }));
-  const keysId = localStorage.length;
+
+  const { theId, setTheId, verify, setVerify } = useCrudStore((state) => ({
+    theId: state.theId,
+    setTheId: state.setTheId,
+    verify: state.verify,
+    setVerify: state.setVerify,
+  }));
+
+  console.log("the storage task " + taskValue);
   const journalDataObj = {
-    id: keysId,
+    id: parseInt(theId),
     title: titleValue,
     description: descriptionValue,
   };
-  const taskDataObj = { task: taskValue };
+  const taskDataObj = { id: parseInt(theId), task: taskValue };
+  console.log("object data " + taskDataObj.task);
   const PushData = (theType) => {
+    const keysId = localStorage.length;
+    journalDataObj.id = keysId;
+    taskDataObj.id = keysId;
+    let theStandObj;
+    let verfRes = true;
     // Update local storage with input values
+    theType === "Journal"
+      ? ((theStandObj = journalDataObj),
+        theStandObj.title.trim() === "" && theStandObj.description.trim()
+          ? (verfRes = false)
+          : "")
+      : theType === "Task"
+      ? ((theStandObj = taskDataObj),
+        theStandObj.task.trim() === "" ? (verfRes = false) : "")
+      : null;
 
-    localStorage.setItem(
-      `${theType}-${keysId}`,
-      JSON.stringify(
-        theType === "Task"
-          ? taskDataObj
-          : theType === "Journal"
-          ? journalDataObj
-          : null
-      )
-    );
+    verfRes === false
+      ? ""
+      : localStorage.setItem(
+          `${theType}-${keysId}`,
+          JSON.stringify(theStandObj)
+        );
+
+    setTaskValue("");
+    setTitleValue("");
+    setDescriptionValue("");
 
     // ... other input values
   };
@@ -51,6 +75,32 @@ export const useUpdateData = () => {
 
     // ... other input values
   };
+  const UpdateData = (title, description) => {
+    setTitleValue(title);
+    setDescriptionValue(description);
+  };
+  const UpdateDataStorage = (id) => {
+    journalDataObj.title.trim() === "" &&
+    journalDataObj.description.trim() === ""
+      ? localStorage.removeItem(`Journal-${id}`, JSON.stringify(journalDataObj))
+      : localStorage.setItem(`Journal-${id}`, JSON.stringify(journalDataObj));
+    setTaskValue("");
+    setTitleValue("");
+    setDescriptionValue("");
+  };
 
-  return { PushData, PullData };
+  const DeleteData = (id, theType) => {
+    let theStandObj;
+    theType === "Task"
+      ? (theStandObj = taskDataObj)
+      : theType === "Journal"
+      ? (theStandObj = journalDataObj)
+      : "";
+    console.log(id);
+    localStorage.removeItem(`${theType}-${id}`, JSON.stringify(theStandObj));
+    setTaskValue("");
+    setTitleValue("");
+    setDescriptionValue("");
+  };
+  return { PushData, PullData, UpdateData, UpdateDataStorage, DeleteData };
 };
