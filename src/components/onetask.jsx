@@ -2,9 +2,13 @@ import { useState } from "react";
 import "./oneTask.css";
 import "./typography.css";
 import CstBtn from "./cstBtn";
+import { useUpdateData } from "../hooks/updateData";
 
-const OneTask = ({ label }) => {
+const OneTask = ({ label, id }) => {
   const [isChecked, setIsChecked] = useState(false);
+  const { DeleteData, PullData } = useUpdateData();
+  const hhh = PullData("Task");
+  console.log("this is hhh " + hhh);
 
   return (
     <label className="bg-myMateBlack text-myFontWhite rounded-2xl py-4 sm:w-fit THEtypo-14 w-full flex items-center gap-4 px-4 cursor-pointer ">
@@ -19,7 +23,12 @@ const OneTask = ({ label }) => {
       >
         {label}
       </span>
-      <CstBtn routeto={"/"} onClick={""} bgImg={"Remove1"} Btnlabel={""} />
+      <CstBtn
+        routeto={"/"}
+        onClick={() => DeleteData(id, "Task")}
+        bgImg={"Remove1"}
+        Btnlabel={""}
+      />
     </label>
   );
 };

@@ -3,16 +3,25 @@ import "../../components/typography.css";
 import "./inspect-journals.css";
 import { useParams } from "react-router-dom";
 import { useUpdateData } from "../../hooks/updateData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CstBtn from "../../components/cstBtn";
+import { useCrudStore } from "../../context/routeState";
 
 const InspectJournal = () => {
-  const { PullData } = useUpdateData();
+  const { theId, setTheId, verify, setVerify } = useCrudStore((state) => ({
+    theId: state.theId,
+    setTheId: state.setTheId,
+  }));
+  const { PullData, UpdateData, DeleteData } = useUpdateData();
   const [dataArr, setDataArr] = useState(PullData("Journal"));
 
   const { id } = useParams();
   const itemDetail = dataArr.filter((item) => item.id === parseInt(id));
+  useEffect(() => {
+    setTheId(id);
+  }, []);
 
+  console.log("staged id " + theId);
   return (
     <div className=" flex flex-col justify-between gap-16 h-full min-h-screen bg-myYellow myLg:px-10  ">
       <div className="flex justify-between items-center pt-16 px-9  ">
@@ -36,15 +45,17 @@ const InspectJournal = () => {
         <div className="pb-14  flex justify-center items-end gap-4 ">
           <CstBtn
             bgImg={"Add"}
-            onClick={""}
+            onClick={() =>
+              UpdateData(itemDetail[0].title, itemDetail[0].description)
+            }
             Btnlabel={""}
-            routeto={"/new-journals"}
+            routeto={`/new-journals/${theId}`}
           />
           <CstBtn
             bgImg={"Remove"}
-            onClick={""}
+            onClick={() => DeleteData(id, "Journal")}
             Btnlabel={""}
-            routeto={"/new-journals"}
+            routeto={"/journals"}
           />
         </div>
       </div>
