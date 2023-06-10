@@ -96,7 +96,7 @@ export const useUpdateData = () => {
       : theType === "Journal"
       ? (theStandObj = journalDataObj)
       : "";
-    console.log(id);
+
     localStorage.removeItem(`${theType}-${id}`, JSON.stringify(theStandObj));
     setTaskValue("");
     setTitleValue("");
