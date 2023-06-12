@@ -9,6 +9,8 @@ export const useUpdateData = () => {
     setTitleValue,
     descriptionValue,
     setDescriptionValue,
+    checked,
+    setChecked,
   } = useDataStore((state) => ({
     taskValue: state.task,
     setTaskValue: state.setTask,
@@ -16,6 +18,8 @@ export const useUpdateData = () => {
     setTitleValue: state.setTitle,
     descriptionValue: state.description,
     setDescriptionValue: state.setDescription,
+    checked: state.checked,
+    setChecked: state.setChecked,
   }));
 
   const { theId } = useCrudStore((state) => ({
@@ -23,16 +27,22 @@ export const useUpdateData = () => {
   }));
 
   const journalDataObj = {
-    id: parseInt(theId),
+    id: theId,
     title: titleValue,
     description: descriptionValue,
   };
-  const taskDataObj = { id: parseInt(theId), task: taskValue };
+  const keysIdT = crypto.randomUUID().toString();
+
+  const taskDataObj = { id: theId, task: taskValue, checked: false };
   console.log("object data " + taskDataObj.task);
   const PushData = (theType) => {
-    const keysId = localStorage.length;
-    journalDataObj.id = keysId;
-    taskDataObj.id = keysId;
+    console.log("task object " + taskDataObj.checked);
+    console.log("keysidt " + keysIdT);
+    const keysId = crypto.randomUUID();
+    journalDataObj.id = keysId.toString();
+    taskDataObj.id = keysId.toString();
+
+    console.log("pushed id " + journalDataObj.id);
     let theStandObj;
     let verfRes = true;
     // Update local storage with input values
@@ -59,6 +69,7 @@ export const useUpdateData = () => {
 
     // ... other input values
   };
+
   const PullData = (theType) => {
     // Retrieve values from local storage on component mount
 
@@ -86,6 +97,7 @@ export const useUpdateData = () => {
   };
 
   const DeleteData = (id, theType) => {
+    console.log("deleted id " + id + typeof id);
     let theStandObj;
     theType === "Task"
       ? (theStandObj = taskDataObj)
