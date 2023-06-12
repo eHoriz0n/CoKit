@@ -5,13 +5,21 @@ import CstBtn from "../../components/cstBtn";
 import { useUpdateData } from "../../hooks/updateData";
 import { useCrudStore } from "../../context/routeState";
 import { useParams } from "react-router-dom";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { useInputAnimation } from "../../hooks/animations/pages/inputsAnime";
 const NewJournal = () => {
   const { id } = useParams();
   console.log("the New journal id " + id);
   const { PushData, UpdateDataStorage } = useUpdateData();
+  const { InputAnimation } = useInputAnimation();
   return (
-    <div className="bg-myMateBlack min-h-screen w-full">
+    <motion.div
+      className="bg-myMateBlack min-h-screen w-full"
+      initial={InputAnimation.Initial}
+      animate={InputAnimation.inInitial}
+      transition={{ duration: 0.2 }}
+      exit={InputAnimation.inPagination}
+    >
       <div className="flex justify-between items-center pt-16 px-9 mb-6 ">
         <GetTheDate colorr="#FFB800" />
         <CstBtn
@@ -36,7 +44,7 @@ const NewJournal = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

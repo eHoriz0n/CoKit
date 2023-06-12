@@ -6,7 +6,9 @@ import "./typography.css";
 const PageBody = ({ theType }) => {
   const { PullData } = useUpdateData();
   const [dataArr, setDataArr] = useState(PullData(theType));
-
+  useEffect(() => {
+    dataArr;
+  });
   // const newData = PullData(theType);
   // setDataArr((dataArr) => [...dataArr, newData]);
   return (
@@ -19,6 +21,7 @@ const PageBody = ({ theType }) => {
               // eslint-disable-next-line react/jsx-key
               return task.task === "" ? null : (
                 <OneTask
+                  key={task.id}
                   label={task.task}
                   id={task.id}
                   setDataArr={setDataArr}

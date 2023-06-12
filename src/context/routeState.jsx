@@ -13,6 +13,10 @@ const useDataStore = create((set) => ({
   setDescription: (description) => {
     set(() => ({ description: description }));
   },
+  checked: false,
+  setChecked: (checked) => {
+    set(() => ({ checked: checked }));
+  },
   dataArray: [],
   setDataArray: (dataArray) => {
     set(() => ({ dataArray: dataArray }));
