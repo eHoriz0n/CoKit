@@ -1,8 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-labels */
-/* eslint-disable no-unused-vars */
 import GetDate from "../utils/getDate";
-
+// rendering the date from GetDate() function
 const GetTheDate = ({ colorr }) => {
   return (
     <div className="THEtypo-14 " style={{ color: colorr }}>
@@ -10,5 +7,4 @@ const GetTheDate = ({ colorr }) => {
     </div>
   );
 };
-
 export default GetTheDate;

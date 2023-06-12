@@ -1,6 +1,5 @@
 import GetTheDate from "../../components/getTheDate";
 import "../../components/typography.css";
-import "./inspect-journals.css";
 import { useParams } from "react-router-dom";
 import { useUpdateData } from "../../hooks/updateData";
 import { useEffect, useState } from "react";
@@ -8,15 +7,13 @@ import CstBtn from "../../components/cstBtn";
 import { useCrudStore } from "../../context/routeState";
 import { useInspectAnimation } from "../../hooks/animations/pages/inspectAnime";
 import { motion, AnimatePresence } from "framer-motion";
-
 const InspectJournal = () => {
-  const { theId, setTheId, verify, setVerify } = useCrudStore((state) => ({
+  const { theId, setTheId } = useCrudStore((state) => ({
     theId: state.theId,
     setTheId: state.setTheId,
   }));
   const { PullData, UpdateData, DeleteData } = useUpdateData();
-  const [dataArr, setDataArr] = useState(PullData("Journal"));
-
+  const [dataArr] = useState(PullData("Journal"));
   const { id } = useParams();
   const itemDetail = dataArr.filter(
     (item) => item.id.toString() === id.toString()
@@ -24,8 +21,6 @@ const InspectJournal = () => {
   useEffect(() => {
     setTheId(id.toString());
   }, []);
-
-  console.log("im workiiiiiiiiiiiing");
   const { InspectAnimation } = useInspectAnimation();
   return (
     <motion.div
@@ -38,7 +33,7 @@ const InspectJournal = () => {
         <GetTheDate colorr="#1E1E1E " />
         <CstBtn
           bgImg={"GoBack"}
-          onClick={""}
+          onClick={() => {}}
           Btnlabel={""}
           routeto={"/journals"}
         />
@@ -79,5 +74,4 @@ const InspectJournal = () => {
     </motion.div>
   );
 };
-
 export default InspectJournal;

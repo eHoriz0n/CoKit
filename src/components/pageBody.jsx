@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useUpdateData } from "../hooks/updateData";
 import OneJournal from "./oneJournal";
 import OneTask from "./onetask";
@@ -9,16 +9,12 @@ const PageBody = ({ theType }) => {
   useEffect(() => {
     dataArr;
   });
-  // const newData = PullData(theType);
-  // setDataArr((dataArr) => [...dataArr, newData]);
   return (
     <div>
       <p className="font-bold THEtypo-MyXl mb-4">Your {theType}s</p>
-      {/* it will be a loop to create journal Component */}
       <div className="flex  sm:flex-wrap sm:flex-row gap-4 flex-nowrap flex-col  pb-20">
         {theType === "Task"
           ? dataArr.map((task) => {
-              // eslint-disable-next-line react/jsx-key
               return task.task === "" ? null : (
                 <OneTask
                   key={task.id}

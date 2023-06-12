@@ -1,7 +1,7 @@
 import Header from "../../components/header";
 import PageBody from "../../components/pageBody";
-import { motion, AnimatePresence } from "framer-motion";
-import { usePageAnimation } from "../../hooks/animations/pages/taskAnime";
+import { motion } from "framer-motion";
+import { usePageAnimation } from "../../hooks/animations/pages/pageAnime";
 const Journal = () => {
   const { PageAnimation } = usePageAnimation();
   return (
@@ -18,5 +18,4 @@ const Journal = () => {
     </motion.div>
   );
 };
-
 export default Journal;

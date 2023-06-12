@@ -32,20 +32,11 @@
 
 .text-truncate {
     overflow: hidden;
-    /* Hide overflowing text */
     white-space: nowrap;
-    /* Prevent line breaks */
     text-overflow: ellipsis;
-    /* Display ellipsis (...) for truncated text */
-
-    /* Adjust the number of lines to truncate */
-
 }
 
-
-
 @media screen and (min-width:1367px) {
-
 
     .THEtypo-777 {
         font-size: calc(.5vw + 1.6875rem)
@@ -71,6 +62,4 @@
     .THEtypo-xxl {
         font-size: calc(.5vw + 1.75rem)
     }
-
-    ;
 }

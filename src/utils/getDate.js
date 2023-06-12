@@ -16,7 +16,6 @@ function GetDate() {
     "December",
   ];
   const month = monthNames[currentDate.getMonth()];
-
   const day = String(currentDate.getDate()).padStart(2, "0");
   const formattedDate = `${month} ${day}, ${year}`;
   return formattedDate;

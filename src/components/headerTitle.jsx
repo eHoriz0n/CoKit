@@ -12,5 +12,4 @@ const HeaderTitle = ({ theType }) => {
     </div>
   );
 };
-
 export default HeaderTitle;
