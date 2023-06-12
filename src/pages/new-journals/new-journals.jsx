@@ -3,13 +3,11 @@ import DataInputs from "../../components/data-inputs";
 import "../../components/typography.css";
 import CstBtn from "../../components/cstBtn";
 import { useUpdateData } from "../../hooks/updateData";
-import { useCrudStore } from "../../context/routeState";
 import { useParams } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInputAnimation } from "../../hooks/animations/pages/inputsAnime";
 const NewJournal = () => {
   const { id } = useParams();
-  console.log("the New journal id " + id);
   const { PushData, UpdateDataStorage } = useUpdateData();
   const { InputAnimation } = useInputAnimation();
   return (
@@ -23,7 +21,7 @@ const NewJournal = () => {
       <div className="flex justify-between items-center pt-16 px-9 mb-6 ">
         <GetTheDate colorr="#FFB800" />
         <CstBtn
-          onClick={""}
+          onClick={() => {}}
           bgImg={"GoBack"}
           routeto={"/journals"}
           Btnlabel={""}
@@ -47,5 +45,4 @@ const NewJournal = () => {
     </motion.div>
   );
 };
-
 export default NewJournal;

@@ -1,7 +1,5 @@
-/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import "./cstBtn.css";
-
 const CstBtn = ({ routeto, onClick, bgImg, Btnlabel }) => {
   return (
     <div>
@@ -21,5 +19,4 @@ const CstBtn = ({ routeto, onClick, bgImg, Btnlabel }) => {
     </div>
   );
 };
-
 export default CstBtn;

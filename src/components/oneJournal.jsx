@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./typography.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useOneJournalAnimation } from "../hooks/animations/components/oneJournalAnime";
 const OneJournal = ({ id, title, description }) => {
   const { singleJournalAnimation } = useOneJournalAnimation();
-
   return (
     <motion.div
       variants={singleJournalAnimation}
@@ -22,5 +21,4 @@ const OneJournal = ({ id, title, description }) => {
     </motion.div>
   );
 };
-
 export default OneJournal;

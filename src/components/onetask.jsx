@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react";
-import "./oneTask.css";
 import "./typography.css";
 import CstBtn from "./cstBtn";
 import { useUpdateData } from "../hooks/updateData";
 import { motion } from "framer-motion";
 import { useOneTaskAnimation } from "../hooks/animations/components/oneTaskAnime";
-import useDataStore from "../context/routeState";
-
 const OneTask = ({ label, id, setDataArr }) => {
   const [isChecked, setIsChecked] = useState(
-    JSON.parse(localStorage.getItem(`Task-${id}`)).checked !== undefined
+    JSON.parse(localStorage.getItem(`Task-${id}`)).checked
       ? JSON.parse(localStorage.getItem(`Task-${id}`)).checked
       : ""
   );
-  const { DeleteData, PullData } = useUpdateData();
+  const { DeleteData } = useUpdateData();
   const { singleTaskAnimation } = useOneTaskAnimation();
   const [isDeleted, setIsDeleted] = useState(false);
-
   const stagedTask = { id: id, task: label, checked: isChecked };
   useEffect(() => {
     localStorage.setItem(`Task-${id}`, JSON.stringify(stagedTask));
   }, [isChecked]);
-  console.log(isChecked);
   return (
     <motion.div
       variants={singleTaskAnimation}
@@ -47,11 +42,9 @@ const OneTask = ({ label, id, setDataArr }) => {
         routeto={"/"}
         onClick={() => {
           setIsDeleted(!isDeleted);
-
           setTimeout(() => {
             DeleteData(id, "Task");
             setDataArr((prev) => prev.filter((task) => task.id !== id));
-            console.log("i dooooooooo");
           }, 500);
         }}
         bgImg={"Remove1"}

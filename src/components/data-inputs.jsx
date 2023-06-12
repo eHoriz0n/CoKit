@@ -1,8 +1,9 @@
 import "./typography.css";
 import useDataStore from "../context/routeState";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInputAnimation } from "../hooks/animations/pages/inputsAnime";
 const DataInputs = ({ theType }) => {
+  // updating state to public state store
   const {
     taskValue,
     setTaskValue,
@@ -18,18 +19,8 @@ const DataInputs = ({ theType }) => {
     descriptionValue: state.description,
     setDescriptionValue: state.setDescription,
   }));
-  console.log(taskValue);
+  // animation object
   const { InputAnimation } = useInputAnimation();
-  // const handleDescription = (event) => {
-  //   setDescriptionValue(event.target.value);
-  // };
-  // const handleTask = (event) => {
-  //   setTaskValue(event.target.value);
-  // };
-
-  // const handleTitle = (event) => {
-  //   setTitleValue(event.target.value);
-  // };
   return (
     <motion.div
       className="w-full max-w-72 mb-16  myLg:max-w-4444"
@@ -55,6 +46,7 @@ const DataInputs = ({ theType }) => {
         </p>
         <textarea
           value={
+            // getting state dependig on the task or journal page
             theType === "Journal"
               ? descriptionValue
               : theType === "Task"
@@ -75,5 +67,4 @@ const DataInputs = ({ theType }) => {
     </motion.div>
   );
 };
-
 export default DataInputs;
