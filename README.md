@@ -24,7 +24,7 @@ A small simple to-do with journaling web app
 ### Links
 
 - Github repo: [Co Kit repo](https://github.com/CLOG9/CoKit)
-- Live Site : [co-kit](https://co-kit.vercel.app/)
+- Live Site : [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
