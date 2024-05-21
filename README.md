@@ -51,7 +51,4 @@ some of the things that im trying to focus on is data fetching from an API using
 
  chat gpt and each framwork docs are enough for me to create this app also i get some help from the discord community .
 
-## Author
-
-- instagram - [@el_padremf](https://instagram.com/el_padremf?igshid=ZGUzMzM3NWJiOQ==)
 
