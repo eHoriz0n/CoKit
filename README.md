@@ -55,6 +55,3 @@ some of the things that im trying to focus on is data fetching from an API using
 
 - instagram - [@el_padremf](https://instagram.com/el_padremf?igshid=ZGUzMzM3NWJiOQ==)
 
-## Acknowledgments
-
-thanks to [@wassim_wahab](https://instagram.com/wassim_wahab?igshid=NTc4MTlwNjQ2YQ==) who helped me making the design and ui/ux
